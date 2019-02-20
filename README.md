@@ -1,0 +1,2 @@
+# platformer_development
+Basic game foundation meant to be a proof of concept for future projects, as well as potentially turning into a fun game.
