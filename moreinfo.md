@@ -6,4 +6,6 @@ Resolution: 0000x0000     //these need to be decided on
 
 Sprites drawn a 0x resolution
 
+Tools:
+
 Real-time Whiteboard: realtimeboard.com     //Designated tool for collaborating / posting ideas
