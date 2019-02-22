@@ -4,3 +4,5 @@ Basic game foundation meant to be a proof of concept for future projects, as wel
 Authors: Chase M. Sascha E.
 
 Sources: N/A
+
+Engine: Unity 2D
