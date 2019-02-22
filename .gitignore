@@ -1,3 +1,5 @@
+# This file tells git what files should be ignored
+
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
