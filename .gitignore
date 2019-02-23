@@ -1,8 +1,8 @@
 # This file tells git what files should be ignored
 
 [Ll]ibrary/
-[Tt]emp/
 [Oo]bj/
+[Tt]emp/
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
