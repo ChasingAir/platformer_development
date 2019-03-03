@@ -14,13 +14,19 @@ public class SoftDrag : MonoBehaviour //this script
   public float slideMagnitudeX = 0f;
   public float slideMagnitudeY = 0f;
   public Rigidbody2D rb;
+  public float moveSpeed = 1f;
   private Vector2 slideMagnitudeXY;
+  private Vector2 targetPos;
 
     // Update is called once per frame should FixedUpdate be used here instead?
     void Update()
     {
       if (Input.touchCount > 0)
       {
+        gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+        gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+
         foreach (UnityEngine.Touch touch in Input.touches)
 
         if (touch.phase == TouchPhase.Began)
@@ -63,13 +69,22 @@ public class SoftDrag : MonoBehaviour //this script
 
         else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
         {
-            //slideMagnitudeX = 0f;
-            //slideMagnitudeY = 0f;
+            slideMagnitudeX = 0f;
+            slideMagnitudeY = 0f;
         }
 
       slideMagnitudeXY.x = slideMagnitudeX;
       slideMagnitudeXY.y = slideMagnitudeY;
-      rb.position = rb.position + slideMagnitudeXY;
+      //rb.position = rb.position + slideMagnitudeXY; this doesnt't work because it superseeds unity Physics
+      targetPos = rb.position + slideMagnitudeXY;
+      rb.AddForce(((targetPos - rb.position) / Time.deltaTime) * moveSpeed);
     }
+    else // if no fingers touching the screen
+    {
+      rb.velocity = new Vector2(0.0f, 0.0f);
+      gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+      gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+    }
+    Debug.Log(Input.touchCount);
   }
 }
