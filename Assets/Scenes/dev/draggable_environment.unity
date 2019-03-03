@@ -204,7 +204,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6b2d8c1de5071ca4da60d48133d1bb2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -325,6 +325,7 @@ GameObject:
   - component: {fileID: 1823664021}
   - component: {fileID: 1823664020}
   - component: {fileID: 1823664019}
+  - component: {fileID: 1823664024}
   m_Layer: 0
   m_Name: bg_1
   m_TagString: Untagged
@@ -502,3 +503,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1823664024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823664018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f291a231c28b66488d35fe3f821329e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slideMagnitudeX: 0
+  slideMagnitudeY: 0
+  rb: {fileID: 1823664021}

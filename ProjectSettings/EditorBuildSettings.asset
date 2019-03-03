@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/dev/touch_practice.unity
     guid: 3b76e48c502bcf548969214dda9d779d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/dev/joystick_practice.unity
     guid: c2c2496bc866c9144bda070d4a9747f7
+  - enabled: 1
+    path: Assets/Scenes/dev/draggable_environment.unity
+    guid: ef2f94f6017537c4cb030a6a97279e8e
   m_configObjects: {}
