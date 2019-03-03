@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/dev/draggable_environment.unity
     guid: ef2f94f6017537c4cb030a6a97279e8e
   - enabled: 1
+    path: Assets/Scenes/main_menu.unity
+    guid: cb0167a615c00f646b64fa6fbd38c9be
+  - enabled: 1
     path: Assets/Scenes/dev/testLevel0.unity
     guid: 3dfa98a2513ff24489faa04cc8b3258b
   m_configObjects: {}
